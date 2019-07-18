@@ -14,8 +14,8 @@ RUN gunzip GeoLite2-City.mmdb.gz
 
 COPY . /gopath/src/github.com/mattmanning/geoip
 
-RUN go get github.com/gorilla/mux
-RUN go get github.com/oschwald/geoip2-golang
+RUN go get -u github.com/gorilla/mux
+RUN go get -u github.com/oschwald/geoip2-golang
 RUN go install ./...
 
 EXPOSE 8080
